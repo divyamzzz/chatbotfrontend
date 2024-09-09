@@ -1,0 +1,162 @@
+{
+  "id": "0dc22a3d-afb1-4cb2-bfbe-c2496c06a6fd",
+  "name": "Book_ticket",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Book_ticket",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "number_of_adults",
+          "dataType": "@sys.number-integer",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "How many adults are there?"
+          ],
+          "value": "$number_of_adults",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "number_of_child",
+          "dataType": "@sys.number-integer",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "How many children are there with you?"
+          ],
+          "value": "$number_of_child",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date",
+          "dataType": "@sys.date",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "For what date you want to book ticket?"
+          ],
+          "value": "$date",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "time",
+          "dataType": "@sys.time",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "At what time will you visit the museum?"
+          ],
+          "value": "$time",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay your tickets have been reserved. Please make the payment to complete booking."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book a ticket",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "50ce8083-ca79-4e02-a4e4-809d8db53c85",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book for ",
+          "userDefined": false
+        },
+        {
+          "text": "1",
+          "userDefined": false,
+          "alias": "number_of_adults",
+          "meta": "@sys.number-integer"
+        },
+        {
+          "text": " adults and ",
+          "userDefined": false
+        },
+        {
+          "text": "2",
+          "userDefined": true,
+          "alias": "number_of_child",
+          "meta": "@sys.number-integer"
+        },
+        {
+          "text": " childs for ",
+          "userDefined": false
+        },
+        {
+          "text": "3rd June",
+          "userDefined": true,
+          "alias": "date",
+          "meta": "@sys.date"
+        },
+        {
+          "text": " at ",
+          "userDefined": false
+        },
+        {
+          "text": "4.30pm",
+          "userDefined": true,
+          "alias": "time",
+          "meta": "@sys.time"
+        }
+      ],
+      "count": 0,
+      "id": "8941ba91-a416-4d40-99f7-61ae7cd47690",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
