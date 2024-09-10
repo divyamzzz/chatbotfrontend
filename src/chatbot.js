@@ -40,7 +40,7 @@ const ChatBot = () => {
         margin: '0 auto',
         padding: '20px',
         border: '1px solid #ccc',
-        backgroundImage: 'url("https://example.com/your-image.jpg")', // Add the URL of your background image here
+        backgroundImage: 'url("1.jpg")', // Add the URL of your background image here
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
