@@ -40,7 +40,7 @@ const ChatBot = () => {
         margin: '0 auto',
         padding: '20px',
         border: '1px solid #ccc',
-        backgroundImage: 'url("1.jpg")', // Add the URL of your background image here
+        backgroundImage: 'url("https://cdn.britannica.com/34/194834-050-31A08449/Prado-Museum-Madrid.jpg")', // Add the URL of your background image here
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
