@@ -34,13 +34,36 @@ const ChatBot = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px', border: '1px solid #ccc' }}>
-      <h3>ChatBot</h3>
-      <div style={{ height: '300px', overflowY: 'auto', marginBottom: '10px', border: '1px solid #ccc', padding: '10px' }}>
+    <div
+      style={{
+        maxWidth: '400px',
+        margin: '0 auto',
+        padding: '20px',
+        border: '1px solid #ccc',
+        backgroundImage: 'url("https://example.com/your-image.jpg")', // Add the URL of your background image here
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.9, // Reduce the opacity slightly
+      }}
+    >
+      <h3 style={{ textAlign: 'center' }}>Museum Booking System</h3>
+      <div
+        style={{
+          height: '300px',
+          overflowY: 'auto',
+          marginBottom: '10px',
+          border: '1px solid #ccc',
+          padding: '10px',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adding a semi-transparent background for the conversation
+        }}
+      >
         {/* Render the conversation history */}
         {conversation.map((msg, index) => (
           <div key={index} style={{ textAlign: msg.sender === 'user' ? 'right' : 'left' }}>
-            <p><strong>{msg.sender === 'user' ? 'You' : 'Bot'}:</strong> {msg.text}</p>
+            <p>
+              <strong>{msg.sender === 'user' ? 'You' : 'Bot'}:</strong> {msg.text}
+            </p>
           </div>
         ))}
       </div>
