@@ -15,16 +15,14 @@ const ChatBot = () => {
         // Send the message to the Node.js backend
         const res = await axios.post('https://backendchatbot-mpsk.onrender.com/webhook', { message });
 
-        // Extract the bot's response and the total price
+        // Extract the bot's response (which now includes total price)
         const botResponse = res.data.fulfillmentText;
-        const totalPrice = res.data.totalPrice; // Extract the total price
 
         // Update the conversation with the bot's response
         setConversation([...conversation, 
           { sender: 'user', text: message }, 
-          { sender: 'bot', text: botResponse },
-          totalPrice !== undefined ? { sender: 'bot', text: `Total Price: ${totalPrice}` } : null
-        ].filter(Boolean)); // Add totalPrice if available
+          { sender: 'bot', text: botResponse }
+        ]);
 
         // Clear the input field
         setMessage('');
